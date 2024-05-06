@@ -1,2 +1,2 @@
-# javascript
+# JavaScript Notes
 JavaScript notes
