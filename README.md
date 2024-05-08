@@ -601,3 +601,54 @@ let nestedArrowObj = {
     }
 }
 ```
+
+# map(), filter(), reduce()
+
+These functions are higher-order functions (functions that take another function as an argument or return a function).
+
+**map()**
+
+This function is used to transform an array, it takes a function as an argument and in which we define our logic of transformation and it returns as a new array in response.
+for example we have an array of numbers and we want to double each of the numbers.
+
+```js
+
+const arr = [1,2,3,4,5];
+
+// map() will run on each item of an array and perform the logic
+const output = arr.map(function(y) {
+    return y * 2; // we must write the return keyword otherwise we will receive undefined.
+});
+
+// The output will be `[2, 4, 6, 8, 10]`
+```
+
+**filter()**
+
+This functions is used to filter an array, It also takes a function as an argument in which the filter logic is written and it returns a new array in response.
+For example we want to filter an array of numbers which has numbers greater than 4.
+
+```js
+const arr = [1,3,4,5,7,8,9]
+
+const output = arr.filter((arr) => {
+    return arr > 4;
+})
+
+// The response will be [5, 7, 8, 9]
+```
+
+**reduce()**
+
+This function is used to gather/pile up time by time or accumulate the values in an array. It takes a function as an argument in which accumulation logic is written and it returns a  single accumulated value. The `reduce()` method takes 2 arguments, 1st is a function and 2nd is the initial value. The function we pass to the `reduce()` method has 2 parameters. 1st is an accumulator and 2nd is a current value
+For example, we want to sum all the numbers in an array.
+
+```js
+const arr = [0,9,8,7,6,5];
+
+const output = arr.reduce(function (accumulator, current) {
+    return accumulator = accumulator + current
+}, 0)
+
+//The output will be 35
+```
