@@ -89,10 +89,11 @@ function getName() {
 
 # Lexical Scope
 
+Example of lexical scope, Scope Chain, or closures. Closures have some advantages in javascript, 
+such as maintaining state, function currying, a function once, and function memoizing, closures can be used  in data hiding/encapsulation, 
+but disadvantages of closures: overconsumption of memory, memory leaks,
+
 ```js
-// Example of lexical scope, Scope Chain, or closures. Closures have some advantages in javascript, 
-//such as maintaining state, function currying, a function once, and function memoizing, closures can be used  in data hiding/encapsulation, 
-//but disadvantages of closures: overconsumption of memory, memory leaks,
 
 function a() {
     function b() {
