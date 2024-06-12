@@ -558,9 +558,11 @@ const obj = {
 obj.c();
 ```
 
-`call() apply() bind()` (sharing methods)
+# `call() apply() bind()` (sharing methods)
 `this` value can be modified by using these methods. each and every method in javascript has access to these special methods 
 
+
+**call()**
 
 This is called function borrowing. here we are using call() method with student object. we use this call method when we want this keyword to point where we want. The first argument of call will be the refrence to this variable where we want this to point and after that there will be function arguments if any.
 
@@ -568,8 +570,12 @@ This is called function borrowing. here we are using call() method with student 
 student.printName.call(student2, "arg1", "arg2"); // by using call method, we are sharing student's object printName method and sharing it with student2 so this keyword will now point to student2 object.
 ```
 
+**apply()**
+
 In apply method here a only difference is passing other arguments, in call we pass arguments separately but in apply we will provide a list of arguments
 `student.printName.apply(student2, ["argss", "argsss"]);`
+
+**bind()**
 
 Bind method is exactly the same as call method, in case of bind it will make a copy of that function which can be invoked later rather than invoking directly;
 
@@ -578,7 +584,8 @@ const copyoffunc = student.printName.bind(student2, ["argss", "argsss"]);
 copyoffunc();
 ```
 
-**`this` inside arrow functions:** arrow function does not come along with their own this keyword binding by default. in arrow function this retains the value of enclosing lexicle context or you can see how that arrow function written in code.
+**`this` inside arrow functions:**
+arrow function does not come along with their own this keyword binding by default. in arrow function this retains the value of enclosing lexicle context or you can see how that arrow function written in code.
 
 
 ```js
