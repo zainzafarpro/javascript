@@ -660,3 +660,8 @@ const output = arr.reduce(function (accumulator, current) {
 
 //The output will be 35
 ```
+
+# Memoization
+
+Memoization is a technique in which we write a program to speed up the load time or to avoid unnecessary API calls.
+For example, if make an API call on page load and stored the data in our application,  then when the page loads again we should place a check if the data is already there then we should skip the API call.
