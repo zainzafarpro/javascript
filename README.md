@@ -665,3 +665,23 @@ const output = arr.reduce(function (accumulator, current) {
 
 Memoization is a technique in which we write a program to speed up the load time or to avoid unnecessary API calls.
 For example, if make an API call on page load and stored the data in our application,  then when the page loads again we should place a check if the data is already there then we should skip the API call.
+
+# script tag with async, defer or without.
+
+```js
+<script src="some network resource"></script>
+```
+This is the normal way of loading some network resources via a script tag. 
+in this case, while HTML parsing when a parser encounters a script tag it will stop the HTML parsing and start fetching the script and after that, it will execute the script.
+
+```js
+<script async src="some network resource"></script>
+```
+
+This is another way of loading a network resource but now we have an attribute on the script tag named "async" In this case, when HTML parsing is going on a parser will asynchronously the script tag from network asynchronously and after that, it will stop the HTML parsing and executes the script tag.
+
+```js
+<script defer src="some network resource"></script>
+```
+
+This is another way to load the script tag with the defer attribute, In this case, HTML parsing won't stop till the end and the script tag will be fetched asynchronously and then executed when the HTML parsing is done.
