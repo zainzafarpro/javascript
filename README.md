@@ -678,7 +678,7 @@ in this case, while HTML parsing when a parser encounters a script tag it will s
 <script async src="some network resource"></script>
 ```
 
-This is another way of loading a network resource but now we have an attribute on the script tag named "async" In this case, when HTML parsing is going on a parser will asynchronously the script tag from network asynchronously and after that, it will stop the HTML parsing and executes the script tag.
+This is another way of loading a network resource but now we have an attribute on the script tag named "async" In this case, when HTML parsing is going on a parser will asynchronously fetch the script tag from the network and after that, it will stop the HTML parsing and executes the script tag.
 
 ```js
 <script defer src="some network resource"></script>
