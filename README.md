@@ -685,3 +685,10 @@ This is another way of loading a network resource but now we have an attribute o
 ```
 
 This is another way to load the script tag with the defer attribute, In this case, HTML parsing won't stop till the end and the script tag will be fetched asynchronously and then executed when the HTML parsing is done.
+
+**Which one to use? and when?**
+
+async attribute does not guarantee the order of execution of script, for example, we have 2 or 3 scripts in our head tag and they are dependent on each other.
+setting up an async attribute in this case on scripts probably breaks up the code. if we are loading an independent script then async can be an option.
+
+defer attribute maintains the order of execution of scripts so if we are loading multiple scripts that are dependent on each other then using defer is a best choice. 
