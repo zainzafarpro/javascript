@@ -699,6 +699,7 @@ Whenever we have nested event listeners in the DOM then the default behavior of 
 For example, if we have 3 nested divs with click handlers respectively #grandparent, #parent, #child. 
 so whenever i click the #child div all of the events other parent's events are called in this order: `Child is click, Parent is Click, Grandparent is Clicked`
 This is called event bubbling.
+> Event Delegation is only possible because of event bubbling.
 
 if we want to use event capturing the we can set event capture flag to `true` in our event listners like this
 `element.addEventListner('click', ()=> {}, true)`
