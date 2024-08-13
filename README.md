@@ -692,3 +692,16 @@ async attribute does not guarantee the order of execution of script, for example
 setting up an async attribute in this case on scripts probably breaks up the code. if we are loading an independent script then async can be an option.
 
 defer attribute maintains the order of execution of scripts so if we are loading multiple scripts that are dependent on each other then using defer is a best choice. 
+
+**Event Bubbling & Event Capturing**
+
+Whenever we have nested event listeners in the DOM then the default behavior of those events is bubbling out.
+For example, if we have 3 nested divs with click handlers respectively #grandparent, #parent, #child. 
+so whenever i click the #child div all of the events other parent's events are called in this order: `Child is click, Parent is Click, Grandparent is Clicked`
+This is called event bubbling.
+
+if we want to use event capturing the we can set event capture flag to `true` in our event listners like this
+`element.addEventListner('click', ()=> {}, true)`
+The third argument in the addEventListner represents the event caputring flag, by default it acts as false.
+if we set these flags to true and click the #child div then the order of click events will be `Grandparent is Clicked, Parent is clicked, Child is clicked`
+This is called event capturing.
