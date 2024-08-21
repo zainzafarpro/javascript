@@ -706,3 +706,5 @@ if we want to use event capturing the we can set event capture flag to `true` in
 The third argument in the addEventListner represents the event caputring flag, by default it acts as false.
 if we set these flags to true and click the #child div then the order of click events will be `Grandparent is Clicked, Parent is clicked, Child is clicked`
 This is called event capturing.
+
+> if we are using mix-and-match values of event bubbling and capturing then the order will be: Event capturing will happen first and then event bublling will happen.
